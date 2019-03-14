@@ -78,15 +78,16 @@ class ViewController: UIViewController {
         
         if pickedAnswer == allQuestions.list[questionIndex].answer {
             score += 1
+            ProgressHUD.showSuccess("Correct")
         } else {
-                print("wrong")
-            }
+            print("wrong")
         }
+    }
     
     
     func startOver() {
         score = 0
-       questionIndex = 0
+        questionIndex = 0
         nextQuestion()
     }
     
